@@ -1,6 +1,6 @@
 let amigos = [];
 
-// Adicionar evento para tecla Enter no input
+
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('amigo');
     input.addEventListener('keypress', function(event) {
