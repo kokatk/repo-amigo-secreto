@@ -1,31 +1,36 @@
 let amigos = [];
 
-function adicionarAmigo() {
-    
-    const nomeInput = document.getElementById('nome-amigo').value.trim();
+// Adicionar evento para tecla Enter no input
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('amigo');
+    input.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            adicionarAmigo();
+        }
+    });
+});
 
+function adicionarAmigo() {
+    const nomeInput = document.getElementById('amigo').value.trim();
 
     if (nomeInput === '') {
         alert('Por favor, insira um nome.');
         return;
     }
 
+    if (amigos.includes(nomeInput)) {
+        alert('Este nome já foi adicionado!');
+        return;
+    }
+
     amigos.push(nomeInput);
-
-    
-    document.getElementById('nome-amigo').value = '';
-
-    
-    console.log(amigos);
+    document.getElementById('amigo').value = '';
+    atualizarListaAmigos();
 }
 
 function atualizarListaAmigos() {
-    
-    const lista = document.getElementById('lista-amigos');
-    
-
+    const lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
-    
 
     for (let i = 0; i < amigos.length; i++) {
         const item = document.createElement('li');
@@ -47,7 +52,6 @@ function sortearAmigo() {
     
     const amigoSorteado = amigos[indiceAleatorio];
 
-    
-    const resultado = document.getElementById('resultado-sorteio');
-    resultado.innerHTML = `Amigo sorteado: ${amigoSorteado}`;
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li>🎉 Amigo sorteado: <strong>${amigoSorteado}</strong></li>`;
 }
