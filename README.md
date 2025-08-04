@@ -32,9 +32,13 @@ A proposta é organizar sorteios de amigo secreto de forma prática, interativa 
 # Clone o repositório
 git clone https://github.com/seu-usuario/amigo-secreto.git
 ````
-1 - Abra o arquivo index.html no navegador
-2 - Adicione os nomes no campo de entrada (pressione Enter ou clique em Adicionar)
-3 - Clique em "Sortear amigo" para realizar o sorteio
+---
+
+- Abra o arquivo index.html no navegador
+- Adicione os nomes no campo de entrada (pressione Enter ou clique em Adicionar)
+- Clique em "Sortear amigo" para realizar o sorteio
+
+---
 
 ```bash
 amigo-secreto/
@@ -46,8 +50,9 @@ amigo-secreto/
 ├── style.css                    # Estilização da aplicação
 └── README.md                    # Documentação do projeto
 ````
+---
 
-🎯 **Objetivo**
+## 🎯 **Objetivo**
 
 Este projeto foi desenvolvido com o propósito de:
 Cumprir os requisitos propostos no desafio do Programa Oracle Next Education (ONE)
